@@ -18,21 +18,20 @@ Para lalalals asa jashaksa
 3. lilililili
 
 ## Scripts y Notebooks
-
-
+Detallar un poco los notebook
 
 ## Evaluación de modelo
-### Métrica de rendimiento elegida
+#### Métrica de rendimiento elegida
 lalalalallalalalalalalalalalalal
 
 
-### Modelo creado vs Modelo entrenado de Facebook
+#### Modelo creado vs Modelo entrenado de Facebook
 lalalalalalalallalala
 
 
 ## Uso de modelo
 Dentro de la carpeta */Models* se encuentra un archivo llamado predict.py, para hacer la predicción dentro de la terminal o cmd se debe ejecutarse de acuer
-### Predicción de review
+#### Predicción de review
 Se utiliza como primer argumento **-r** para determinar que es una predicción de reseña, y como segundo argumento recibe el texto de la reseña, como se muestra a continuación: 
 
 ```
@@ -44,7 +43,7 @@ $ python predict.py -r "In general I really liked this restaurant, especially th
     
 ```
 
-### Predicción de dataset de reviews
+#### Predicción de dataset de reviews
 Para que esta predicción sea exitosa el dataset debe ser un archivo *.csv* y debe contener el texto de las reviews en una columna llamada *texto*
 Se utiliza como primer argumento **-d** para determinar que es una predicción de dataset,y como segundo argumento recibe el directorio de algún dataset de prueba, como se muestra a continuación: 
 ```
