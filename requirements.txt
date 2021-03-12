@@ -1,0 +1,26 @@
+###### Requirements without Version Specifiers ######`
+tarfile
+pandas
+seaborn
+matplotlib
+math
+gensim
+ntlk
+pprint
+bokeh
+missingno
+embedding
+numpy
+logging
+sklearn
+utils
+scipy
+regex
+num2words
+vocabulary
+io
+codecs
+datetime
+six
+heapq
+re
