@@ -97,13 +97,5 @@ $ python predict.py -r "In general I really liked this restaurant, especially th
      }
     
 ```
-
-#### Predicción de dataset de reviews
-Para que esta predicción sea exitosa el dataset debe ser un archivo *.csv* y debe contener el texto de las reviews en una columna llamada *texto*
-Se utiliza como primer argumento **-d** para determinar que es una predicción de dataset,y como segundo argumento recibe el directorio de algún dataset de prueba, como se muestra a continuación: 
-```
-$ python predict.py -d "../dataset_prueba.csv"
-    Prediction Completed
-    
-```
-Esta predicción guardará un archivo .csv con los resultados de la predicción. El archivo resultante tendrá el nombre del archivo ingresado más "_results_" y más un timestamp que funcione como identificador único. Por ejemplo en este caso el archivo generado con las predicciones tendría el nombre de *dataset_prueba_results_1272121982.csv* . 
+## Link del modelo
+Google Drive: https://drive.google.com/file/d/1Nm0Ebc9Wntw2qoc1nmnJvDatFAsoxgeN/view?usp=sharing
