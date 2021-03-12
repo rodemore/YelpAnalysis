@@ -48,7 +48,7 @@ Contiene el uso de algoritmos de nltk que permiten la extracción de Bigrams, Tr
 #### 4_categorySimilarity
 ##### Requerimiento de uso: 
 
-*Para que este notebook funcione correctamente es necesario descargar un Word Embedding en un archivo .vec, y colocarlo en una carpeta llamada **/Embeddings**. El embedding utilizado en este repositorio se lo puede obtener en el siguiente enlace ........*  
+*Para que este notebook funcione correctamente es necesario descargar un Word Embedding en un archivo .vec, y colocarlo en una carpeta llamada **/Embeddings** en la raiz del repositorio. El embedding utilizado en este repositorio se lo puede obtener en el siguiente enlace ........*  
 
 Este notebook hace uso de Word Embeddings que permitan vectorizar una frase. 
 
