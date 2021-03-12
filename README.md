@@ -45,7 +45,7 @@ Contiene la aplicación del algorítmo LDA sobre el texto de las reseñas prepro
 #### 4_Ngrams
 Contiene el uso de algoritmos de nltk que permiten la extracción de Bigrams, Trigrams y Fourgrams del texto preprocesado. 
 
-#### 4_categorySimilarity
+#### 5_categorySimilarity
 ##### Requerimiento de uso: 
 
 *Para que este notebook funcione correctamente es necesario descargar un Word Embedding en un archivo .vec, y colocarlo en una carpeta llamada **/Embeddings** en la raiz del repositorio. El embedding utilizado en este repositorio se lo puede obtener en el siguiente enlace ........*  
@@ -56,9 +56,21 @@ Este notebook realiza las siguientes tareas:
 * Toma una muestra de 100000 reseñas. 
 * Prepara una algoritmo que calcula la distancia coseno entre vectores. 
 * Calcula la distancia de cada reseña a cada categoría.
-* Estandariza las distancias obtenidas usando MinMaxScaler
+* Estandariza las distancias obtenidas usando MinMaxScaler convirtiendolas en lo que ahora llamaremos score.
 * Guarda los resultados en un archivo llamado reseña_scores.csv
 
+#### 6_preEntrenamiento
+Este notebook prepara la data para estar lista para entrenamiento y testeo. Contiene: 
+* Visualización de distribuciones de Score de cada categoría. 
+* Filtrado de outliers. 
+    * Cálculo de mínimo score de una reseña. 
+    * Aplicación de Z score para el filtrado de outliers. En este caso unicamente fueron retirados los outliers que pertenece a distancias grandes aberrantes.
+      Nota: Este proceso permitió el filtrado de reseñas que no pertenecen al idioma Inglés, caso que que no fue contemplado en el primer preprocesamiento de los datos.
+* Establecimiento de Threshold en los scores para la etiquetación de reseñas en cada categoria. 
+    * Incluye uso de técnicas de palabras frecuentes y de ngrams para determinar un threshold.
+* Etiquetación de categorias.
+* Split de data de entrenamiento y teste: 80% traing, 20% testing.
+* Guarda los datasets de entrenamiento y testing en archivos llamados "data_training.csv" y "data_testing.csv" respectivamente. 
 
 
 ## Evaluación de modelo
