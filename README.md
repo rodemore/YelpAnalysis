@@ -75,6 +75,16 @@ Este notebook prepara la data para estar lista para entrenamiento y testeo. Cont
 #### 7_Training
 Este notebook realiza el entrenamiento con el modelo de clasificación BERT MultiLabel.
 
+### 8_prediction_evaluation
+Dado que el modelo empleado es de clasificación, se procede a utilizar la métrica de evaluación Curva de ROC para conocer los falsos positivos y negativos de la predicción realizada por el modelo generado.
+
+### 9_Facebook_Test
+Testeo del modelo de Facebook con la data generada para análisis.
+
+### 10_comparaciónResultados
+Comparación de palabras frecuentes y n-grams generados de las reseñas empleando el modelo generado y el de Facebook.
+
+
 ## Evaluación de modelo
 #### Métrica de rendimiento elegida
 lalalalallalalalalalalalalalalal
@@ -88,15 +98,22 @@ lalalalalalalallalala
 Dentro de la carpeta */Models* se encuentra un archivo llamado predict.py, para hacer la predicción dentro de la terminal o cmd se debe ejecutarse de acuer
 #### Predicción de review
 Se utiliza como primer argumento **-r** para determinar que es una predicción de reseña, y como segundo argumento recibe el texto de la reseña, como se muestra a continuación: 
-Se utiliza como segundo argumento **-m** para indicar la ruta del modelo.
 
 ```
-$ python predict.py -r "In general I really liked this restaurant, especially the customer service, I thought it was very good" -m "/path/to/model"
+$ python predict.py -r "In general I really liked this restaurant, especially the customer service, I thought it was very good"
     { category_label: ["food", "service"],
       category_result: [0, 1],
       category_score: [0.49, 0.83]
      }
     
 ```
-## Link del modelo
-Google Drive: https://drive.google.com/file/d/1Nm0Ebc9Wntw2qoc1nmnJvDatFAsoxgeN/view?usp=sharing
+
+#### Predicción de dataset de reviews
+Para que esta predicción sea exitosa el dataset debe ser un archivo *.csv* y debe contener el texto de las reviews en una columna llamada *texto*
+Se utiliza como primer argumento **-d** para determinar que es una predicción de dataset,y como segundo argumento recibe el directorio de algún dataset de prueba, como se muestra a continuación: 
+```
+$ python predict.py -d "../dataset_prueba.csv"
+    Prediction Completed
+    
+```
+Esta predicción guardará un archivo .csv con los resultados de la predicción. El archivo resultante tendrá el nombre del archivo ingresado más "_results_" y más un timestamp que funcione como identificador único. Por ejemplo en este caso el archivo generado con las predicciones tendría el nombre de *dataset_prueba_results_1272121982.csv* . 
