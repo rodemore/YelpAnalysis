@@ -24,3 +24,5 @@ datetime
 six
 heapq
 re
+transformers
+tensorflow
