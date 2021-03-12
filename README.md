@@ -8,11 +8,14 @@ Caso de estudio planteado para el Hackathon TAWS 2021 de Ciencias de Datos
 * Stefannie Zeas
 
 ## Datasets
+
 Los datasets sin procesar se deberán encontrar dentro de una carpeta "./Blueberry". Entre estos datasets tenemos: 
-* **negocio.csv**: Contiene información de cada uno de los negocios de la plataforma. 
-* **usuario.csv**: Contiene información de los usuarios registrados en la plataforma.
-* **resenia.csv**: Contiene información de las reseñas de usuarios a negocios, cuantificadas con estrellas del 1 al 5. 
-* * **checkin.csv**: Contiene información de fecha-hora de los checkin de usuarios por cada negocio. 
+| Nombre archivo   |      Descripción      |
+|----------|:-------------:|
+| **negocio.csv** | Contiene información de cada uno de los negocios de la plataforma. |
+| **usuario.csv** | Contiene información de los usuarios registrados en la plataforma. |
+| **resenia.csv** | Contiene información de las reseñas de usuarios a negocios, cuantificadas con estrellas del 1 al 5. |
+| **checkin.csv** | Contiene información de fecha-hora de los checkin de usuarios por cada negocio. |
 
 ## Metodología
 Para lalalals asa jashaksa
