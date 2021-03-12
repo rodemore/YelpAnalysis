@@ -31,12 +31,35 @@ Notebook que contiene la *lectura* de los datasets mencionados en la Sección Da
 Notebook que muestra la representatividad de las categorías de negocios para la plataforma, que porcentaje existe por cada categoría. Y la selección de las categorías de consumo, con las cuales se trabajó de ahora en adelante.  
 
 #### 2_preProcesamientoResenias
-Notebook que contiene el preprocesamiento del texto de las reseñas, incluye
+Notebook que contiene el preprocesamiento del texto de las reseñas, incluye:
 * lowercase
 * remove punctuation
 * remove stop words
 * stemming (Posteriormente fue descartado)  
+
 Además, contiene la distribución de palabras por reseña. 
+
+#### 3_topicDetectionLDA
+Contiene la aplicación del algorítmo LDA sobre el texto de las reseñas preprocesadas. Y que genera un dashboard HTML que estará guardado en la carpeta *"/datasets_consumo"*
+
+#### 4_Ngrams
+Contiene el uso de algoritmos de nltk que permiten la extracción de Bigrams, Trigrams y Fourgrams del texto preprocesado. 
+
+#### 4_categorySimilarity
+##### Requerimiento de uso: 
+
+*Para que este notebook funcione correctamente es necesario descargar un Word Embedding en un archivo .vec, y colocarlo en una carpeta llamada **/Embeddings**. El embedding utilizado en este repositorio se lo puede obtener en el siguiente enlace ........*  
+
+Este notebook hace uso de Word Embeddings que permitan vectorizar una frase. 
+
+* Establece los vectores de cada categoría.
+* Toma una muestra de 100000 reseñas. 
+* Prepara una algoritmo que calcula la distancia coseno entre vectores. 
+* Calcula la distancia de cada reseña a cada categoría.
+* Estandariza los scores obtenidos usando MinMaxScaler
+* Guarda los resultados en un archivo llamado reseña_scores.csv
+
+
 
 ## Evaluación de modelo
 #### Métrica de rendimiento elegida
