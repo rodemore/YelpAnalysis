@@ -35,7 +35,7 @@ Notebook que contiene el preprocesamiento del texto de las reseñas, incluye
 * lowercase
 * remove punctuation
 * remove stop words
-* stemming (Posteriormente fue descartado)
+* stemming (Posteriormente fue descartado)  
 Además, contiene la distribución de palabras por reseña. 
 
 ## Evaluación de modelo
