@@ -64,7 +64,7 @@ Este notebook prepara la data para estar lista para entrenamiento y testeo. Cont
 * Visualización de distribuciones de Score de cada categoría. 
 * Filtrado de outliers. 
     * Cálculo de mínimo score de una reseña. 
-    * Aplicación de Z score para el filtrado de outliers. En este caso unicamente fueron retirados los outliers que pertenece a distancias grandes aberrantes.
+    * Aplicación de Z score para el filtrado de outliers. En este caso unicamente fueron retirados los outliers que pertenece a distancias grandes aberrantes.  
       Nota: Este proceso permitió el filtrado de reseñas que no pertenecen al idioma Inglés, caso que que no fue contemplado en el primer preprocesamiento de los datos.
 * Establecimiento de Threshold en los scores para la etiquetación de reseñas en cada categoria. 
     * Incluye uso de técnicas de palabras frecuentes y de ngrams para determinar un threshold.
