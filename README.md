@@ -72,6 +72,8 @@ Este notebook prepara la data para estar lista para entrenamiento y testeo. Cont
 * Split de data de entrenamiento y teste: 80% traing, 20% testing.
 * Guarda los datasets de entrenamiento y testing en archivos llamados "data_training.csv" y "data_testing.csv" respectivamente. 
 
+#### 7_Training
+Este notebook realiza el entrenamiento con el modelo de clasificación BERT MultiLabel.
 
 ## Evaluación de modelo
 #### Métrica de rendimiento elegida
