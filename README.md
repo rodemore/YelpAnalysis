@@ -7,9 +7,12 @@ Caso de estudio planteado para el Hackathon TAWS 2021 de Ciencias de Datos
 * Milca Valdez
 * Stefannie Zeas
 
-## Descripción de los datos
-Lalalalalalalala aquí describir un ṕoco la data
-
+## Datasets
+Los datasets sin procesar se deberán encontrar dentro de una carpeta "./Blueberry". Entre estos datasets tenemos: 
+* **negocio.csv**: Contiene información de cada uno de los negocios de la plataforma. 
+* **usuario.csv**: Contiene información de los usuarios registrados en la plataforma.
+* **resenia.csv**: Contiene información de las reseñas de usuarios a negocios, cuantificadas con estrellas del 1 al 5. 
+* * **checkin.csv**: Contiene información de fecha-hora de los checkin de usuarios por cada negocio. 
 
 ## Metodología
 Para lalalals asa jashaksa
@@ -18,7 +21,18 @@ Para lalalals asa jashaksa
 3. lilililili
 
 ## Scripts y Notebooks
-Detallar un poco los notebook
+#### 0_datasets
+Notebook que contiene la *lectura* de los datasets mencionados en la Sección Datasets.
+
+#### 1_selecciónCategorias
+Notebook que muestra la representatividad de las categorías de negocios para la plataforma, que porcentaje existe por cada categoría. Y la selección de las categorías de consumo, con las cuales se trabajó de ahora en adelante.  
+
+#### 2_preProcesamientoResenias
+Notebook que contiene el preprocesamiento del texto de las reseñas, incluye
+* lowercase
+* remove punctuation
+* remove stop words
+* stemming (Posteriormente fue descartado)
 
 ## Evaluación de modelo
 #### Métrica de rendimiento elegida
