@@ -17,11 +17,6 @@ Los datasets sin procesar se deberán encontrar dentro de una carpeta "./Blueber
 | resenia.csv | Contiene información de las reseñas de usuarios a negocios, cuantificadas con estrellas del 1 al 5. |
 | checkin.csv | Contiene información de fecha-hora de los checkin de usuarios por cada negocio. |
 
-## Metodología
-Para lalalals asa jashaksa
-1. lalala
-2. lelele
-3. lilililili
 
 ## Scripts y Notebooks
 #### 0_datasets
@@ -73,47 +68,41 @@ Este notebook prepara la data para estar lista para entrenamiento y testeo. Cont
 * Guarda los datasets de entrenamiento y testing en archivos llamados "data_training.csv" y "data_testing.csv" respectivamente. 
 
 #### 7_Training
-Este notebook realiza el entrenamiento con el modelo de clasificación BERT MultiLabel.
+Este notebook realiza el entrenamiento con el modelo de clasificación BERT MultiLabel Classifier.
 
-### 8_prediction_evaluation
-Dado que el modelo empleado es de clasificación, se procede a utilizar la métrica de evaluación Curva de ROC para conocer los falsos positivos y negativos de la predicción realizada por el modelo generado.
+#### 8_prediction_evaluation
+Este notebook contiene la evaluación del modelo con la data de testing. 
+Incluye: 
+* Accuracy
+* Recall
+* Precision
+* Curva ROC
 
-### 9_Facebook_Test
-Testeo del modelo de Facebook con la data generada para análisis.
+#### 9_facebook_test
+Este notebook contiene el uso de un algoritmo entrenado de facebook que funciona como un regresor de retorna un score de cuanto se ha hablado de un tema en específico dentro de un texto. 
 
-### 10_comparaciónResultados
-Comparación de palabras frecuentes y n-grams generados de las reseñas empleando el modelo generado y el de Facebook.
+#### 10_comparacionResultados
+Comparacion de resultados del modelo propuesto vs modelo de facebook
 
 
 ## Evaluación de modelo
 #### Métrica de rendimiento elegida
-lalalalallalalalalalalalalalalal
-
-
-#### Modelo creado vs Modelo entrenado de Facebook
-lalalalalalalallalala
+La métrica elegida para la evaluación del algoritmo es el Recall, ya que deseamos que nuetro clasificador tenga un buen nivel de confiabilidad en la predicción
 
 
 ## Uso de modelo
 Dentro de la carpeta */Models* se encuentra un archivo llamado predict.py, para hacer la predicción dentro de la terminal o cmd se debe ejecutarse de acuer
 #### Predicción de review
 Se utiliza como primer argumento **-r** para determinar que es una predicción de reseña, y como segundo argumento recibe el texto de la reseña, como se muestra a continuación: 
+Se utiliza como segundo argumento **-m** para indicar la ruta del modelo.
 
 ```
-$ python predict.py -r "In general I really liked this restaurant, especially the customer service, I thought it was very good"
+$ python predict.py -r "In general I really liked this restaurant, especially the customer service, I thought it was very good" -m "/path/to/model"
     { category_label: ["food", "service"],
       category_result: [0, 1],
       category_score: [0.49, 0.83]
      }
     
 ```
-
-#### Predicción de dataset de reviews
-Para que esta predicción sea exitosa el dataset debe ser un archivo *.csv* y debe contener el texto de las reviews en una columna llamada *texto*
-Se utiliza como primer argumento **-d** para determinar que es una predicción de dataset,y como segundo argumento recibe el directorio de algún dataset de prueba, como se muestra a continuación: 
-```
-$ python predict.py -d "../dataset_prueba.csv"
-    Prediction Completed
-    
-```
-Esta predicción guardará un archivo .csv con los resultados de la predicción. El archivo resultante tendrá el nombre del archivo ingresado más "_results_" y más un timestamp que funcione como identificador único. Por ejemplo en este caso el archivo generado con las predicciones tendría el nombre de *dataset_prueba_results_1272121982.csv* . 
+## Link del modelo
+Google Drive: https://drive.google.com/file/d/1Nm0Ebc9Wntw2qoc1nmnJvDatFAsoxgeN/view?usp=sharing
