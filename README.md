@@ -88,9 +88,10 @@ lalalalalalalallalala
 Dentro de la carpeta */Models* se encuentra un archivo llamado predict.py, para hacer la predicción dentro de la terminal o cmd se debe ejecutarse de acuer
 #### Predicción de review
 Se utiliza como primer argumento **-r** para determinar que es una predicción de reseña, y como segundo argumento recibe el texto de la reseña, como se muestra a continuación: 
+Se utiliza como segundo argumento **-m** para indicar la ruta del modelo.
 
 ```
-$ python predict.py -r "In general I really liked this restaurant, especially the customer service, I thought it was very good"
+$ python predict.py -r "In general I really liked this restaurant, especially the customer service, I thought it was very good" -m "/path/to/model"
     { category_label: ["food", "service"],
       category_result: [0, 1],
       category_score: [0.49, 0.83]
